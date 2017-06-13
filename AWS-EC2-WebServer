@@ -1,0 +1,20 @@
+1. Services > Ec2
+2. Launch Instance
+3. click Amazon Linux AMI 2017.03.0 (HVM), SSD Volume Type. Creates default instance which is not encrypted. Explicit disk encryption is requireed.
+4. Select General purpose | t2.micro. Click configure instance details
+5. Click add storage. Select magnetic
+6. Add tags. Configure Security Group. Add rules and launch. At launch create key pair alert. Create key pairs. Download them
+7. Once the instance is started go to the terrminal and into the directory where the key was saved.
+8. chmod 400 <key.pem>
+9. Get the public ip address of the instance
+10. ssh ec2-user@ip -i key.pem
+11. sudo su -- make yourself superuser
+12. yum updates -y
+13. yum install httpd -y
+14. cd /var/www/html
+15. ls 
+16. nano index.html ctrl+X to save
+17. service httpd start
+18. hit the public ip
+
+
