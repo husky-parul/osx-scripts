@@ -16,5 +16,7 @@
 16. nano index.html ctrl+X to save
 17. service httpd start
 18. hit the public ip
+19. to make the apache server start up on its on every time we re boot ec2 instance do the following :
+  - chkconfig httpd on
 
 
