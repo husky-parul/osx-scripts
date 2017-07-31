@@ -1,0 +1,5 @@
+1. to find services running on a port
+
+    lsof -i tcp:4200
+    COMMAND  PID    USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME
+    node    1971 singh.p   12u  IPv4 0x445c84097c261ac1      0t0  TCP *:4200 (LISTEN)
