@@ -31,18 +31,32 @@ II. Adding your SSH key to the ssh-agent
 
 		2. If you're using macOS Sierra 10.12.2 or later, you will need to modify your ~/.ssh/config file to automatically load keys into the ssh-agent and store passphrases in your keychain.
 
-			Host *
- 				AddKeysToAgent yes
- 				UseKeychain yes
- 				IdentityFile ~/.ssh/id_rsa
+			    Host work.github.com
+			    HostName github.com
+			    User WORK_GITHUB_USERNAME
+			    PreferredAuthentications publickey
+			    IdentityFile ~/.ssh/id_work_rsa
+			    IdentitiesOnly yes
+
+			    Host personal.github.com
+			    HostName github.com
+			    User PERSONAL_GITHUB_USERNAME 
+			    PreferredAuthentications publickey
+			    IdentityFile ~/.ssh/id_personal_rsa
+			    IdentitiesOnly yes
 
  		3. Add your SSH private key to the ssh-agent and store your passphrase in the keychain. If you created your key with a different name, or if you are adding an existing key that has a different name, replace id_rsa in the command with the name of your private key file
 
  			$ ssh-add -K ~/.ssh/id_rsa
 
  III. change git config
+ 
+ 	#change it to use your custom `personal.github.com` hostname
+	git remote rm origin
+	git remote add origin git@personal.github.com:PERSONAL_GITHUB_USERNAME/project.git
 
- 		git config remote.origin.url "git@github.com:husky-parul/osx-scripts.git"
+		
+
 
 
 
