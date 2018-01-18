@@ -1,0 +1,8 @@
+oc adm diagnostics  : to check/diagnose errors
+
+oc cluster up  : to start the cluster
+
+oc cluster down  : to pull down the cluster
+
+
+ 
