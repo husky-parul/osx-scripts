@@ -4,5 +4,11 @@ oc cluster up  : to start the cluster
 
 oc cluster down  : to pull down the cluster
 
+oc login <cluster dns> -u <username>
+
+oc get all  : get all details about resources
+
+oc new-project <project name>
+
 
  
